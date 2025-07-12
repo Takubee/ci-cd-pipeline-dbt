@@ -1,0 +1,11 @@
+customer_id,customer_name,email,created_at,status
+1,John Doe,john.doe@example.com,2024-01-15,active
+2,Jane Smith,jane.smith@example.com,2024-01-16,active
+3,Bob Johnson,bob.johnson@example.com,2024-01-17,inactive
+4,Alice Brown,alice.brown@example.com,2024-01-18,active
+5,Charlie Wilson,charlie.wilson@example.com,2024-01-19,active
+6,Diana Davis,diana.davis@example.com,2024-01-20,inactive
+7,Edward Miller,edward.miller@example.com,2024-01-21,active
+8,Fiona Garcia,fiona.garcia@example.com,2024-01-22,active
+9,George Martinez,george.martinez@example.com,2024-01-23,active
+10,Helen Rodriguez,helen.rodriguez@example.com,2024-01-24,inactive
