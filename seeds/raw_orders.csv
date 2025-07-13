@@ -14,3 +14,11 @@ order_id,customer_id,order_date,total_amount,status
 1013,5,2024-01-27,95.50,completed
 1014,7,2024-01-28,180.00,completed
 1015,8,2024-01-29,250.00,completed
+1016,11,2024-01-30,120.00,completed
+1017,11,2024-02-01,250.00,completed
+1018,11,2024-02-03,80.00,pending
+1019,11,2024-02-05,60.00,completed
+1020,12,2024-02-02,300.00,completed
+1021,12,2024-02-04,150.00,completed
+1022,12,2024-02-06,200.00,completed
+1023,12,2024-02-08,175.00,completed

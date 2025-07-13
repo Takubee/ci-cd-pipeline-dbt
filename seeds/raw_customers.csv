@@ -9,3 +9,5 @@ customer_id,customer_name,email,created_at,status
 8,Fiona Garcia,fiona.garcia@example.com,2024-01-22,active
 9,George Martinez,george.martinez@example.com,2024-01-23,active
 10,Helen Rodriguez,helen.rodriguez@example.com,2024-01-24,inactive
+11,Ian King,ian.king@example.com,2024-01-25,active
+12,Julia Lee,julia.lee@example.com,2024-01-26,active
