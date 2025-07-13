@@ -36,14 +36,21 @@ jobs:
           outputs:
             dev:
               type: postgres
-              host: \${{ secrets.SUPABASE_HOST }}
-              port: \${{ secrets.SUPABASE_PORT }}
-              user: \${{ secrets.SUPABASE_USER }}
-              pass: \${{ secrets.SUPABASE_PASSWORD }}
-              dbname: \${{ secrets.SUPABASE_DATABASE }}
-              schema: \${{ secrets.SUPABASE_SCHEMA }}
+              host: ${SUPABASE_HOST}
+              port: ${SUPABASE_PORT}
+              user: ${SUPABASE_USER}
+              pass: ${SUPABASE_PASSWORD}
+              dbname: ${SUPABASE_DATABASE}
+              schema: ${SUPABASE_SCHEMA}
               threads: 4
         EOF
+              env:
+                SUPABASE_HOST: ${{ secrets.SUPABASE_HOST }}
+                SUPABASE_PORT: ${{ secrets.SUPABASE_PORT }}
+                SUPABASE_USER: ${{ secrets.SUPABASE_USER }}
+                SUPABASE_PASSWORD: ${{ secrets.SUPABASE_PASSWORD }}
+                SUPABASE_DATABASE: ${{ secrets.SUPABASE_DATABASE }}
+                SUPABASE_SCHEMA: ${{ secrets.SUPABASE_SCHEMA }}
 
     - name: Install dbt packages
       run: dbt deps
@@ -85,14 +92,21 @@ jobs:
           outputs:
             prod:
               type: postgres
-              host: \${{ secrets.SUPABASE_HOST }}
-              port: \${{ secrets.SUPABASE_PORT }}
-              user: \${{ secrets.SUPABASE_USER }}
-              pass: \${{ secrets.SUPABASE_PASSWORD }}
-              dbname: \${{ secrets.SUPABASE_DATABASE }}
-              schema: \${{ secrets.SUPABASE_SCHEMA }}
+              host: ${SUPABASE_HOST}
+              port: ${SUPABASE_PORT}
+              user: ${SUPABASE_USER}
+              pass: ${SUPABASE_PASSWORD}
+              dbname: ${SUPABASE_DATABASE}
+              schema: ${SUPABASE_SCHEMA}
               threads: 4
         EOF
+              env:
+                SUPABASE_HOST: ${{ secrets.SUPABASE_HOST }}
+                SUPABASE_PORT: ${{ secrets.SUPABASE_PORT }}
+                SUPABASE_USER: ${{ secrets.SUPABASE_USER }}
+                SUPABASE_PASSWORD: ${{ secrets.SUPABASE_PASSWORD }}
+                SUPABASE_DATABASE: ${{ secrets.SUPABASE_DATABASE }}
+                SUPABASE_SCHEMA: ${{ secrets.SUPABASE_SCHEMA }}
 
     - name: Install dbt packages
       run: dbt deps
@@ -141,4 +155,4 @@ jobs:
         echo "❌ dbt CI/CD pipeline failed!"
         echo "Branch: ${{ github.ref }}"
         echo "Commit: ${{ github.sha }}"
-        echo "Author: ${{ github.actor }}" 
+        echo "Author: ${{ github.actor }}"
