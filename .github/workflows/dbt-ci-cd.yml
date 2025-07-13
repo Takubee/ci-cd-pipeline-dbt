@@ -28,6 +28,13 @@ jobs:
         pip install dbt-core dbt-postgres
 
     - name: Create dbt profiles
+      env:
+        SUPABASE_HOST: ${{ secrets.SUPABASE_HOST }}
+        SUPABASE_PORT: ${{ secrets.SUPABASE_PORT }}
+        SUPABASE_USER: ${{ secrets.SUPABASE_USER }}
+        SUPABASE_PASSWORD: ${{ secrets.SUPABASE_PASSWORD }}
+        SUPABASE_DATABASE: ${{ secrets.SUPABASE_DATABASE }}
+        SUPABASE_SCHEMA: ${{ secrets.SUPABASE_SCHEMA }}
       run: |
         mkdir -p ~/.dbt
         cat > ~/.dbt/profiles.yml << EOF
@@ -44,13 +51,6 @@ jobs:
               schema: ${SUPABASE_SCHEMA}
               threads: 4
         EOF
-              env:
-                SUPABASE_HOST: ${{ secrets.SUPABASE_HOST }}
-                SUPABASE_PORT: ${{ secrets.SUPABASE_PORT }}
-                SUPABASE_USER: ${{ secrets.SUPABASE_USER }}
-                SUPABASE_PASSWORD: ${{ secrets.SUPABASE_PASSWORD }}
-                SUPABASE_DATABASE: ${{ secrets.SUPABASE_DATABASE }}
-                SUPABASE_SCHEMA: ${{ secrets.SUPABASE_SCHEMA }}
 
     - name: Install dbt packages
       run: dbt deps
@@ -84,6 +84,13 @@ jobs:
         pip install dbt-core dbt-postgres
 
     - name: Create dbt profiles
+      env:
+        SUPABASE_HOST: ${{ secrets.SUPABASE_HOST }}
+        SUPABASE_PORT: ${{ secrets.SUPABASE_PORT }}
+        SUPABASE_USER: ${{ secrets.SUPABASE_USER }}
+        SUPABASE_PASSWORD: ${{ secrets.SUPABASE_PASSWORD }}
+        SUPABASE_DATABASE: ${{ secrets.SUPABASE_DATABASE }}
+        SUPABASE_SCHEMA: ${{ secrets.SUPABASE_SCHEMA }}
       run: |
         mkdir -p ~/.dbt
         cat > ~/.dbt/profiles.yml << EOF
@@ -100,13 +107,6 @@ jobs:
               schema: ${SUPABASE_SCHEMA}
               threads: 4
         EOF
-              env:
-                SUPABASE_HOST: ${{ secrets.SUPABASE_HOST }}
-                SUPABASE_PORT: ${{ secrets.SUPABASE_PORT }}
-                SUPABASE_USER: ${{ secrets.SUPABASE_USER }}
-                SUPABASE_PASSWORD: ${{ secrets.SUPABASE_PASSWORD }}
-                SUPABASE_DATABASE: ${{ secrets.SUPABASE_DATABASE }}
-                SUPABASE_SCHEMA: ${{ secrets.SUPABASE_SCHEMA }}
 
     - name: Install dbt packages
       run: dbt deps
