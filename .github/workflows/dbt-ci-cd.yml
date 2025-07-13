@@ -36,12 +36,12 @@ ci_cd_pipeline_dbt:
   outputs:
     dev:
       type: postgres
-      host: ${{ secrets.SUPABASE_HOST }}
-      port: ${{ secrets.SUPABASE_PORT }}
-      user: ${{ secrets.SUPABASE_USER }}
-      pass: ${{ secrets.SUPABASE_PASSWORD }}
-      dbname: ${{ secrets.SUPABASE_DATABASE }}
-      schema: ${{ secrets.SUPABASE_SCHEMA }}
+      host: \${{ secrets.SUPABASE_HOST }}
+      port: \${{ secrets.SUPABASE_PORT }}
+      user: \${{ secrets.SUPABASE_USER }}
+      pass: \${{ secrets.SUPABASE_PASSWORD }}
+      dbname: \${{ secrets.SUPABASE_DATABASE }}
+      schema: \${{ secrets.SUPABASE_SCHEMA }}
       threads: 4
 EOF
 
@@ -85,12 +85,12 @@ ci_cd_pipeline_dbt:
   outputs:
     prod:
       type: postgres
-      host: ${{ secrets.SUPABASE_HOST }}
-      port: ${{ secrets.SUPABASE_PORT }}
-      user: ${{ secrets.SUPABASE_USER }}
-      pass: ${{ secrets.SUPABASE_PASSWORD }}
-      dbname: ${{ secrets.SUPABASE_DATABASE }}
-      schema: ${{ secrets.SUPABASE_SCHEMA }}
+      host: \${{ secrets.SUPABASE_HOST }}
+      port: \${{ secrets.SUPABASE_PORT }}
+      user: \${{ secrets.SUPABASE_USER }}
+      pass: \${{ secrets.SUPABASE_PASSWORD }}
+      dbname: \${{ secrets.SUPABASE_DATABASE }}
+      schema: \${{ secrets.SUPABASE_SCHEMA }}
       threads: 4
 EOF
 
