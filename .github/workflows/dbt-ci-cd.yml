@@ -35,7 +35,7 @@ jobs:
       run: |
         mkdir -p ~/.dbt
         cat > ~/.dbt/profiles.yml << EOF
-        ci_cd_pipeline_dbt:
+        ci_cd_pipeline_dbt :
           target: dev
           outputs:
             dev:
@@ -84,7 +84,7 @@ jobs:
       run: |
         mkdir -p ~/.dbt
         cat > ~/.dbt/profiles.yml << EOF
-        ci_cd_pipeline_dbt:
+        ci_cd_pipeline_dbt :
           target: prod
           outputs:
             prod:
